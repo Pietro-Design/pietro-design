@@ -13,17 +13,20 @@
     <section class="header">
         <nav>
             <a href="index.html">
-                <img src="images/CopiaFirmabadHat-dark.png" alt="bad hat logo">
+                <div class="wide">
+                        <img src="images/CopiaFirmabadHat-dark.png" alt="bad hat logo">
+                </div>
                 <div class="nav-links" id="navLinks">
-                    <img class ="icon" src="images/close_Icon.svg" alt="close phone device menu icon" onclick="hideMenu()">
                     <ul>
+                        <div class="skinny">
+                            <img src="images/CopiaFirmabadHat-dark.png" alt="bad hat logo">
+                        </div>
                         <li><a href="">ABOUT</a></li>
                         <li><a href="">PROJECTS</a></li>
                         <li><a href="">SKILLS</a></li>
                         <li><a href="">CONTACT</a></li>
                     </ul>
                 </div>
-                <img class ="icon" src="images/menuIcon.svg" alt="phone device menu icon" onclick="showMenu()">
             </a>
         </nav>
         <div class="text-box">
@@ -140,10 +143,10 @@
     var navLinks = document.getElementById("navLinks");
 
     function hideMenu(){
-        navLinks.style.width ="0px";
+        navLinks.style.width ="0";
     }
     function showMenu(){
-        navLinks.style.width ="150px";
+        navLinks.style.width ="150";
     }
 </script>
 
