@@ -16,6 +16,7 @@
 
     background-color: #161616;
     transition: 1s;
+    pointer-events: none;
 }
 
 .logo-header{
@@ -46,17 +47,69 @@
 }
 
 /*Header logo*/
-header{
-    position: relative;
-    left: 0;
-    top: 1005;
-    height: 80px;
-}
+.header{
+    width: 100%;
+    background-color: #dad6d2;
 
-header img{
+    background-position: center;
+    background-size: cover;
     position: absolute;
-    width: 60px;
-    left: 2%;
-    bottom: 1rem;
+}
+nav{
+    display: flex;
+    padding: 1% 1%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img {
+    width: 40px;
+}
+.wide{
+    display: block;
+}
+.skinny{
+    display: none;
 }
 
+/*Header links*/
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: #3a4b44;
+    text-decoration: none;
+    font-size: 16px;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover:after{
+    width: 100%;
+}
+
+@media(max-width:700px){
+    .text-box h1{font-size: 20px;}
+    .text-box h2{font-size: 18px;}
+    .nav-links ul li{
+    display: block;
+    }
+    .wide{
+        display: none;
+    }
+    .skinny{
+        display: block;
+    }
+}
