@@ -30,9 +30,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
 
         sessionStorage.setItem('notFirstTime', true);
     }else{
-        setTimeout(()=>{
-            intro.style.opacity = '0';
-        }, 100)
+        intro.style.opacity = '0';
     }
 })
 

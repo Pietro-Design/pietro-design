@@ -1,29 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    <!-- Setup references -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bad Hat | Home</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="homestyle.css">
 
+    <!-- Importing font here -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;600;700&display=swap" rel="stylesheet">
 </head>
-    <body>
-    
-    <!-- Header -->
+<body>
+    <!-- intro animation -->
+    <div class="intro">
+        <h1 class="logo-header">
+            <span class="logo">Bad.</span><span class="logo">Hat</span>
+        </h1>
+    </div>
+
+    <!-- header -->
     <section class="header">
         <nav>
+            <div class="wide">
+                <img src="images/Reactions_disappointed.png" id="slide" onclick="nextslide()">
+            </div>
+
             <a href="index.html">
-                <div class="wide">
-                    <img src="images/CopiaFirmabadHat-dark.png" alt="bad hat logo">
-                </div>
                 <div class="nav-links" id="navLinks">
                     <ul>
                         <div class="skinny">
-                            <img src="images/CopiaFirmabadHat-dark.png" alt="bad hat logo">
+                            <img src="images/Reactions_disappointed.png" id="slide" onclick="nextslide()">
                         </div>
-                        <li><a href="">ABOUT</a></li>
+                        <li><a href="about.html">ABOUT</a></li>
                         <li><a href="">PROJECTS</a></li>
                         <li><a href="">SKILLS</a></li>
                         <li><a href="">CONTACT</a></li>
@@ -31,152 +41,8 @@
                 </div>
             </a>
         </nav>
-        <div class="text-box">
-            <h1>PIETRO PEDUZZI</h1>
-            <h2>Game Designer</h2>
-            <p>Hello I'm Pietro also known as Bad Hat.<br>
-                Feel free to explore my projects and learn more about me.
-            </p>
-            <a href="" class="hero-btn">About me</a>
-        </div>
     </section>
 
-    <!-- About -->
-    
-
-    <!-- Projects -->
-    <!-- 
-    <section class="projects">
-        <h1>Some of my work</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-
-        <div class="row">
-            <div class="project-col">
-                <h3>Air-Tight</h3>
-                <p>Air-Tight is a survival game based on continuous movement. 
-                    You will see yourselves in the act of trying to cross a deserted wasteland in the lack of oxygen. 
-                    Your only companion: a giant animal that will transport all your belongings and oxygen stocks. 
-                    Finding resources and upgrading the mount will give you more chances of survival.</p>
-            </div>
-            <div class="project-col">
-                <h3>Blockscraper</h3>
-                <p>This project was a research on procedural generation, 
-                    shaders and simple AI and pathfinding for NPCs. 
-                    The project was done by myself completely end of 2022.</p>
-            </div>
-            <div class="project-col">
-                <h3>Pirate Pigeons</h3>
-                <p>Pirate Pigeons - Drowning is an Option is a chaotic party game where it is all about working together. 
-                    Players step into the role of a flightless and silly pigeon and embark on the most epic journey of her life. 
-                    Only through solid teamwork the shabby raft will stick together and the crew is prepared to fight off all odds on their way thru the unknown.</p>
-            </div>
-        </div>
-    </section>
-    -->
-    <section class="projects_v2">
-        <h1>Some of my work</h1>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-
-        <div class="row">
-            <div class="project_2-col">
-                <img src="images/Leonardo_Diffusion_abstract_render_ultra_realistic_high_defini_1.jpg" alt="">
-                <h3>Air-Tight</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Modi autem, nisi perferendis, ipsam nostrum similique architecto
-                    omnis quas at reprehenderit laboriosam fugit facilis alias 
-                    laborum odit inventore sunt! Adipisci, velit!</p>
-            </div>
-            <div class="project_2-col">
-                <img src="images/Leonardo_Diffusion_abstract_render_ultra_realistic_high_defini_0.jpg" alt="">
-                <h3>Blockscraper</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Modi autem, nisi perferendis, ipsam nostrum similique architecto
-                    omnis quas at reprehenderit laboriosam fugit facilis alias 
-                    laborum odit inventore sunt! Adipisci, velit!</p>
-            </div>
-            <div class="project_2-col">
-                <img src="images/Leonardo_Diffusion_abstract_render_ultra_realistic_high_defini_0 (2).jpg" alt="">
-                <h3>AR Navigation</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Modi autem, nisi perferendis, ipsam nostrum similique architecto
-                    omnis quas at reprehenderit laboriosam fugit facilis alias 
-                    laborum odit inventore sunt! Adipisci, velit!</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ongoing -->
-    <section class="ongoing">
-        <h1>Ongoing projects</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-        <div class="row">
-            <div class="ongoing-col">
-                <img src="images/MiniCity_2.png" alt="">
-                    <div class="layer">
-                        <h3>TITLE 1</h3>
-                    </div>
-            </div>
-            <div class="ongoing-col">
-                <img src="images/SnowyForest.png" alt="">
-                    <div class="layer">
-                        <h3>TITLE 2</h3>
-                    </div>
-            </div>
-            <div class="ongoing-col">
-                <img src="images/WaterFall.png" alt="">
-                    <div class="layer">
-                        <h3>TITLE 3</h3>
-                    </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <section class="footer">
-        <div class="separator">Socials</div>
-            <div class="icons">
-                <img src="images/itch_io_icon.svg" alt="" width="30">
-                <img src="images/instagram_icon.svg" alt="" width="30">
-                <img src="images/linkedin_icon.svg" alt="" width="30">
-            </div>
-        <p>Made by Pietro Peduzzi</p>
-    </section>
-    <section>
-        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
-    </section>
-
-<!--Java script part here: eg functions to open and close phone menu-->
-<script>
-    var navLinks = document.getElementById("navLinks");
-
-    function hideMenu(){
-        navLinks.style.width ="0";
-    }
-    function showMenu(){
-        navLinks.style.width ="150";
-    }
-
-    // Get the button:
-let mybutton = document.getElementById("myBtn");
-
-// When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function() {scrollFunction()};
-
-function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-
-// When the user clicks on the button, scroll to the top of the document
-function topFunction() {
-  document.body.scrollTop = 0; // For Safari
-  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
-}
-</script>
-
+    <script src="jscode.js"></script>
 </body>
 </html>
