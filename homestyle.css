@@ -101,7 +101,15 @@ nav img {
 .nav-links ul li:hover:after{
     width: 100%;
 }
-
+.nav-links ul li selected::after{
+    content: '';
+    width: 70%;
+    height: 2px;
+    background: #d44449;
+    display:block;
+    margin: auto;
+    position:absolute;
+}
 @media(max-width:700px){
     .text-box h1{font-size: 20px;}
     .text-box h2{font-size: 18px;}
@@ -130,10 +138,12 @@ nav img {
 .mainImage{
     position: absolute;
     width: 90vw;
+    transform: translate(0,-10vh);
 }
 .CharactersLeft{
     position: absolute;
     transform: translate(-30vw, 30%) scaleX(-1);
+
     width: 40vw;
 }
 .CharactersRight{

@@ -43,9 +43,9 @@ images[3]= "images/Reactions_happy.png";
 images[4]= "images/Reactions_tired.png";
 images[5]= "images/Reactions_worried.png";
 let currentpic=0;
-let lastpic= images.lenth-1;
 
 function nextslide(){
     currentpic = Math.floor((Math.random() * images.length));
     document.getElementById('slide').src = images[currentpic];
 }
+/*random character generator --------------------------------------------------------------------------------------*/
