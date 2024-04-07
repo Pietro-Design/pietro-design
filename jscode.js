@@ -49,3 +49,83 @@ function nextslide(){
     document.getElementById('slide').src = images[currentpic];
 }
 /*random character generator --------------------------------------------------------------------------------------*/
+
+/*Head Left*/
+let randomHeadLeft = new Array();
+randomHeadLeft[0]= "images/Head_1_resize.png";
+randomHeadLeft[1]= "images/Head_2_resize.png";
+randomHeadLeft[2]= "images/Head_3_resize.png";
+randomHeadLeft[3]= "images/Head_4_resize.png";
+let currentHeadLeft=0;
+
+function nextsHeadLeft(){
+    currentHeadLeft = Math.floor((Math.random() * randomHeadLeft.length));
+    document.getElementById('headLeft').src = randomHeadLeft[currentHeadLeft];
+}
+/*Body Left*/
+let randomBodyLeft = new Array();
+randomBodyLeft[0]= "images/Body_1_resize.png";
+randomBodyLeft[1]= "images/Body_2_resize.png";
+randomBodyLeft[2]= "images/Body_3_resize.png";
+randomBodyLeft[3]= "images/Body_4_resize.png";
+let currentBodyLeft=0;
+
+function nextsBodyLeft(){
+    currentBodyLeft = Math.floor((Math.random() * randomBodyLeft.length));
+    document.getElementById('bodyLeft').src = randomBodyLeft[currentBodyLeft];
+}
+/*Legs Left*/
+let randomLegsLeft = new Array();
+randomLegsLeft[0]= "images/Legs_1_resize.png";
+randomLegsLeft[1]= "images/Legs_2_resize.png";
+randomLegsLeft[2]= "images/Legs_3_resize.png";
+randomLegsLeft[3]= "images/Legs_4_resize.png";
+let currentLegsLeft=0;
+
+function nextLegsLeft(){
+    currentLegsLeft = Math.floor((Math.random() * randomLegsLeft.length));
+    document.getElementById('legsLeft').src = randomLegsLeft[currentLegsLeft];
+}
+
+/*Head Left*/
+let randomHeadRight = new Array();
+randomHeadRight[0]= "images/Head_1_resize.png";
+randomHeadRight[1]= "images/Head_2_resize.png";
+randomHeadRight[2]= "images/Head_3_resize.png";
+randomHeadRight[3]= "images/Head_4_resize.png";
+let currentHeadRight=0;
+
+function nextsHeadRight(){
+    if(currentHeadLeft != randomHeadRight.length-1){
+        currentHeadRight = currentHeadLeft+1;
+    }else{currentHeadRight = 0;}
+    document.getElementById('headRight').src = randomHeadRight[currentHeadRight];
+}
+/*Body Left*/
+let randomBodyRight = new Array();
+randomBodyRight[0]= "images/Body_1_resize.png";
+randomBodyRight[1]= "images/Body_2_resize.png";
+randomBodyRight[2]= "images/Body_3_resize.png";
+randomBodyRight[3]= "images/Body_4_resize.png";
+let currentBodyRight=0;
+
+function nextsBodyRight(){
+    if(currentBodyLeft != randomBodyRight.length-1){
+        currentBodyRight = currentBodyLeft+1;
+    }else{currentBodyRight = 0;}
+    document.getElementById('bodyRight').src = randomBodyRight[currentBodyRight];
+}
+/*Legs Left*/
+let randomLegsRight = new Array();
+randomLegsRight[0]= "images/Legs_1_resize.png";
+randomLegsRight[1]= "images/Legs_2_resize.png";
+randomLegsRight[2]= "images/Legs_3_resize.png";
+randomLegsRight[3]= "images/Legs_4_resize.png";
+let currentLegsRight=0;
+
+function nextLegsRight(){
+    if(currentLegsLeft != randomLegsRight.length-1){
+        currentLegsRight = currentLegsLeft+1;
+    }else{currentLegsRight = 0;}
+    document.getElementById('legsRight').src = randomLegsRight[currentLegsRight];
+}

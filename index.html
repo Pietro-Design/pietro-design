@@ -50,14 +50,14 @@
         <img src="images/BadHat_text-export_redNoFilter.png" alt="BadHat Writing" class="mainImage">
 
         <img src="images/Cards_shadow_resize.png" alt="" class="CharactersLeft">
-        <img src="images/Legs_1_resize.png" alt="" class="CharactersLeft">
-        <img src="images/Body_1_resize.png" alt="" class="CharactersLeft">
-        <img src="images/Head_1_resize.png" alt="" class="CharactersLeft">
+        <img src="images/Legs_1_resize.png" alt="" id="legsLeft" class="CharactersLeft">
+        <img src="images/Body_1_resize.png" alt="" id="bodyLeft" class="CharactersLeft">
+        <img src="images/Head_1_resize.png" alt="" id="headLeft" class="CharactersLeft">
 
         <img src="images/Cards_shadow_resize.png" alt="" class="CharactersRight">
-        <img src="images/Legs_1_resize.png" alt="" class="CharactersRight">
-        <img src="images/Body_1_resize.png" alt="" class="CharactersRight">
-        <img src="images/Head_1_resize.png" alt="" class="CharactersRight">
+        <img src="images/Legs_1_resize.png" alt="" id="legsRight" class="CharactersRight">
+        <img src="images/Body_1_resize.png" alt="" id="bodyRight" class="CharactersRight">
+        <img src="images/Head_1_resize.png" alt="" id="headRight" class="CharactersRight">
 
         <!-- <a href="" class="hero-btn">About me</a> -->
         <a href="about.html" class="hero-btn_2"><span>About me</span></a>
@@ -106,8 +106,16 @@
     </section>
 
     <!-- jscript -->
-    <script src="jscode.js">
-        nextHead();
+    <script src="jscode.js"></script>
+    </script>
+    <script>
+        nextsHeadLeft();
+        nextsBodyLeft();
+        nextLegsLeft();
+
+        nextsHeadRight();
+        nextsBodyRight();
+        nextLegsRight();
     </script>
 </body>
 </html>
