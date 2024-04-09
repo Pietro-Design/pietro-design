@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+body{
+    min-height: 100vh;
+}
 
 /*Splash screen*/
 .intro{
@@ -48,81 +51,105 @@
 
 /*Header ----------------------------------------------------------------------------------------*/
 /*Header logo*/
-.header{
-    z-index: 2;
-    width: 100%;
-    background-color: #dad6d2;
-
-    background-position: center;
-    background-size: cover;
-    position: fixed;
-}
 nav{
+    background-color: #dad6d2e7;
+    box-shadow: 3px 3px 5px rgba(0, 0,0,0.1);
     display: flex;
     padding: 1% 1%;
-    justify-content: space-between;
-    align-items: center;
+
+    width: 100%;
+    justify-content: flex-end;
+    position:fixed;
+    z-index: 10;
 }
 nav img {
     width: 40px;
 }
-.wide{
-    display: block;
-}
-.skinny{
-    display: none;
-}
 
 /*Header links*/
-.nav-links{
-    flex: 1;
-    text-align: right;
-}
-.nav-links ul li{
+nav ul{
+    width: 100%;
     list-style: none;
-    display: inline-block;
-    padding: 8px 12px;
-    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
-.nav-links ul li a{
+nav li{
+    height: 100%;
+}
+nav a{
+    height: 100%;
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+
     color: #3a4b44;
     text-decoration: none;
-    font-size: 16px;
 }
-.nav-links ul li::after{
+nav li::after{
     content: '';
     width: 0%;
     height: 2px;
     background: #d44449;
     display: block;
-    margin: auto;
+    margin:auto;
+    transform: translate(0px ,-8px);
+
     transition: 0.5s;
 }
-.nav-links ul li:hover:after{
-    width: 100%;
+nav li:hover:after{
+    width: 43%;
 }
-.nav-links ul li selected::after{
+nav li customSelected:after{
     content: '';
-    width: 70%;
-    height: 2px;
+    width: 100%;
+    height: 3px;
     background: #d44449;
     display:block;
     margin: auto;
-    position:absolute;
 }
-@media(max-width:700px){
-    .text-box h1{font-size: 20px;}
-    .text-box h2{font-size: 18px;}
-    .nav-links ul li{
-    display: block;
-    }
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 3;
 
-    .header{display:none;}
-    .wide{
+    background-color: #dad6d24b;
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    backdrop-filter: blur(10px);
+
+    display: none;
+    flex-direction: column;
+    align-items:flex-end;
+    justify-content:flex-start;
+}
+.sidebar li{
+    padding-top: 10px;
+    height: 40px;
+}
+.sidebar a{
+    width: 100%;
+}
+.menuButton{
+    display: none;
+}
+
+@media(max-width:800px){
+    .menuButton{
+        display: block;
+    }
+    .headerIc{
         display: none;
     }
-    .skinny{
-        display: block;
+    .hideOnMobile{
+        display: none;
+    }
+}
+@media(max-width:400px){
+    .sidebar{
+        width: 100%;
     }
 }
 /*Landing ----------------------------------------------------------------------------------------*/

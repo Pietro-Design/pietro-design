@@ -48,6 +48,15 @@ function nextslide(){
     currentpic = Math.floor((Math.random() * images.length));
     document.getElementById('slide').src = images[currentpic];
 }
+
+function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'flex';
+}
+function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.display = 'none';
+}
 /*random character generator --------------------------------------------------------------------------------------*/
 
 /*Head Left*/
