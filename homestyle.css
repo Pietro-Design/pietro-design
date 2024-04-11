@@ -270,3 +270,39 @@ nav li customSelected:after{
     transform: translate(0, 20vh);
     }
 }
+
+/* Scrolling footer ----------------------------------------------------------------------------------------*/
+.scrollContainer{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background-color: #ede8e4;
+}
+.scroll{
+    white-space: nowrap;
+    margin: 0 2em;
+}
+.scroll div{
+    display: flex;
+    gap: 2em;
+}
+.scroll p{
+    margin-bottom: 0;
+    line-height: 30px;
+    color: #dad6d2;
+}
+
+.rightScroll{
+    animation: RightToLeft 50s infinite linear;
+}
+
+@keyframes RightToLeft{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-50%);
+    }
+}
+
+/* Quick introduction ----------------------------------------------------------------------------------------*/

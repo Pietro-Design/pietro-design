@@ -1,11 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <style>
+        .introContainer {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .introText-section {
+            padding: 10;
+            flex: 1;
+            text-align: left;
+            order:1;
+        }
+        .introImage-section {
+            flex: 1;
+            text-align: right;
+            order: 2;
+        }
+        .introImage-section img{
+            width: 400px;
+        }
+        .introSocial-icons {
+            display: flex;
+            justify-content: left;
+        }
+        .introSocial-icons img {
+            width: 30px;
+            margin-right: 10px;
+        }
+        @media (max-width: 600px) {
+            .introContainer{
+                flex-direction: column;
+            }
+            .introText-section{
+                text-align: center;
+                order: 2;
+            }
+            .introSocial-icons{
+                justify-content: center;
+            }
+            .introImage-section {
+                align-self: center;
+                order: 1;
+            }
+            .introImage-section img{
+                width: 80vw;
+            }
+        }
+    </style>
 </head>
 <body>
-    
+    <section>
+        <div class="introContainer">
+            <div class="introText-section">
+                <p>Hi, I am</p>
+                <h1>Pietro Peduzzi</h1>
+                <p>Some content text...</p>
+                <div class="introSocial-icons">
+                    <a href="#"><img src="images/linkedin_icon.svg" alt="Social Icon 1"></a>
+                    <a href="#"><img src="images/instagram_icon.svg" alt="Social Icon 2"></a>
+                    <a href="#"><img src="images/itch_io_icon.svg" alt="Social Icon 3"></a>
+                </div>
+                <button onclick="location.href='link-to-another-page'">Button</button>
+            </div>
+            <div class="introImage-section">
+                <img src="images/ProfilePicture.jpeg" alt="About Me">
+            </div>
+        </div>
+    </section>
 </body>
 </html>
