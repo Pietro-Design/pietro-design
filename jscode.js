@@ -96,7 +96,7 @@ function nextLegsLeft(){
     document.getElementById('legsLeft').src = randomLegsLeft[currentLegsLeft];
 }
 
-/*Head Left*/
+/*Head Right*/
 let randomHeadRight = new Array();
 randomHeadRight[0]= "images/Head_1_resize.png";
 randomHeadRight[1]= "images/Head_2_resize.png";
@@ -105,12 +105,15 @@ randomHeadRight[3]= "images/Head_4_resize.png";
 let currentHeadRight=0;
 
 function nextsHeadRight(){
-    if(currentHeadLeft != randomHeadRight.length-1){
-        currentHeadRight = currentHeadLeft+1;
-    }else{currentHeadRight = 0;}
+    currentHeadRight = Math.floor((Math.random() * randomHeadRight.length));
+    if(currentHeadRight == currentHeadLeft){
+        if(currentHeadLeft != randomHeadRight.length-1){
+            currentHeadRight = currentHeadLeft+1;
+        }else{currentHeadRight = 0;}
+    }
     document.getElementById('headRight').src = randomHeadRight[currentHeadRight];
 }
-/*Body Left*/
+/*Body Right*/
 let randomBodyRight = new Array();
 randomBodyRight[0]= "images/Body_1_resize.png";
 randomBodyRight[1]= "images/Body_2_resize.png";
@@ -119,12 +122,15 @@ randomBodyRight[3]= "images/Body_4_resize.png";
 let currentBodyRight=0;
 
 function nextsBodyRight(){
-    if(currentBodyLeft != randomBodyRight.length-1){
-        currentBodyRight = currentBodyLeft+1;
-    }else{currentBodyRight = 0;}
+    currentBodyRight = Math.floor((Math.random() * randomBodyRight.length));
+    if(currentBodyRight == currentBodyLeft){
+        if(currentBodyLeft != randomBodyRight.length-1){
+            currentBodyRight = currentBodyLeft+1;
+        }else{currentBodyRight = 0;}
+    }
     document.getElementById('bodyRight').src = randomBodyRight[currentBodyRight];
 }
-/*Legs Left*/
+/*Legs Right*/
 let randomLegsRight = new Array();
 randomLegsRight[0]= "images/Legs_1_resize.png";
 randomLegsRight[1]= "images/Legs_2_resize.png";
@@ -133,8 +139,13 @@ randomLegsRight[3]= "images/Legs_4_resize.png";
 let currentLegsRight=0;
 
 function nextLegsRight(){
-    if(currentLegsLeft != randomLegsRight.length-1){
-        currentLegsRight = currentLegsLeft+1;
-    }else{currentLegsRight = 0;}
+    currentLegsRight = Math.floor((Math.random() * randomLegsRight.length));
+    if(currentLegsRight == currentLegsLeft){
+        if(currentLegsLeft != randomLegsRight.length-1){
+            currentLegsRight = currentLegsLeft+1;
+        }else{currentLegsRight = 0;}
+    }
     document.getElementById('legsRight').src = randomLegsRight[currentLegsRight];
 }
+
+/*Skills --------------------------------------------------------------------------------------*/

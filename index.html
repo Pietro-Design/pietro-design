@@ -53,12 +53,12 @@
         <img src="images/Cards_shadow_resize.png" alt="" class="CharactersLeft">
         <img src="images/Legs_1_resize.png" alt="" id="legsLeft" class="CharactersLeft">
         <img src="images/Body_1_resize.png" alt="" id="bodyLeft" class="CharactersLeft">
-        <img src="images/Head_1_resize.png" alt="" id="headLeft" class="CharactersLeft">
+        <img src="images/Head_1_resize.png" alt="" id="headLeft" class="CharactersLeft" onclick="nextsHeadLeft(); nextsBodyLeft(); nextLegsLeft()">
 
         <img src="images/Cards_shadow_resize.png" alt="" class="CharactersRight">
         <img src="images/Legs_1_resize.png" alt="" id="legsRight" class="CharactersRight">
         <img src="images/Body_1_resize.png" alt="" id="bodyRight" class="CharactersRight">
-        <img src="images/Head_1_resize.png" alt="" id="headRight" class="CharactersRight">
+        <img src="images/Head_1_resize.png" alt="" id="headRight" class="CharactersRight" onclick="nextsHeadRight(); nextsBodyRight(); nextLegsRight()">
 
         <!-- <a href="" class="hero-btn">About me</a> -->
         <a href="about.html" class="hero-btn_2"><span>About me</span></a>
@@ -122,49 +122,62 @@
     </div>
 
     <!-- skills -->
-    <section>
-        <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>
-        </p>
-    </section>
+    <section style="background-color: #ede8e4;">
+        <div class="skillTitle">
+            <h1 style="color: #d44449;">Skills</h1>
+        </div>
+        <div class="skill-section">
+            <div class="skill-bx">
+                <div class="left-bx">
 
+                    <div class="bar">
+                        <div class="info">
+                            <span>Unity</span>
+                        </div>
+                        <div class="progress-line advanced"><span></span></div>
+                    </div>
+    
+                    <div class="bar">
+                        <div class="info">
+                            <span>C#</span>
+                        </div>
+                        <div class="progress-line good"><span></span></div>
+                    </div>
+    
+                    <div class="bar">
+                        <div class="info">
+                            <span>Figma</span>
+                        </div>
+                        <div class="progress-line basic"><span></span></div>
+                    </div>
+    
+                </div>
+    
+                <div class="right-bx">
+    
+                    <div class="bar">
+                        <div class="info">
+                            <span>HTML CSS</span>
+                        </div>
+                        <div class="progress-line basic"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>Unreal</span>
+                        </div>
+                        <div class="progress-line basic"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>Blender</span>
+                        </div>
+                        <div class="progress-line good"><span></span></div>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </section>
     <!-- section separator -->
     <div class="scrollContainer">
         <div class="scroll">
@@ -176,7 +189,10 @@
     </div>
 
     <!-- projects -->
-    <section>
+    <section style="background-color: #ede8e4;">
+        <div class="skillTitle">
+            <h1 style="color: #d44449;">Projects</h1>
+        </div>
 
     </section>
 
@@ -192,6 +208,7 @@
 
     <!-- Footer -->
     
+
 
     <!-- jscript -->
     <script src="jscode.js"></script>

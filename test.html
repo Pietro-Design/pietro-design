@@ -1,78 +1,244 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <style>
-        .introContainer {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 20px;
+<html lang="en">
+    <head>
+        <title>Skill Bar</title>
 
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #dad6d2e7;
-        }
-        .introText-section {
-            padding: 10;
-            flex: 1;
-            text-align: left;
-            order:1;
-        }
-        .introImage-section {
-            flex: 1;
-            text-align: right;
-            order: 2;
-        }
-        .introImage-section img{
-            width: 400px;
-        }
-        .introSocial-icons {
-            display: flex;
-            justify-content: left;
-        }
-        .introSocial-icons img {
-            width: 30px;
-            margin-right: 10px;
-        }
-        @media (max-width: 600px) {
-            .introContainer{
-                flex-direction: column;
+        <style>
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                font-family: 'Poppins', sans-serif;
             }
-            .introText-section{
-                text-align: center;
-                order: 2;
-            }
-            .introSocial-icons{
+            .skill-section{
+                min-height: 100vh;
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
                 justify-content: center;
+                align-items: center;
+                background-color: #dad6d2;
             }
-            .introImage-section {
-                align-self: center;
-                order: 1;
+            .skill-bx{
+                width: 80%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 50px;
+                place-items: center;
+                margin-top: 20px;
+                background: #fff;
+                padding: 100px;
+                border-radius: 10px;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
             }
-            .introImage-section img{
-                width: 80vw;
+            .skill-bx .left-bx{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+            
             }
-        }
-    </style>
-</head>
-<body>
-    <section>
-        <div class="introContainer">
-            <div class="introText-section">
-                <p>Hi, I am</p>
-                <h1>Pietro Peduzzi</h1>
-                <p>Some content text...</p>
-                <div class="introSocial-icons">
-                    <a href="https://www.linkedin.com/in/pietro-peduzzi-bb103a23a/"><img src="images/linkedin_icon.svg" alt="Linkedin Icon"></a>
-                    <a href="https://www.instagram.com/bad_hat_/"><img src="images/instagram_icon.svg" alt="Instagram Icon 2"></a>
-                    <a href="https://bad-hat.itch.io/"><img src="images/itch_io_icon.svg" alt="Itch.io Icon 3"></a>
+            
+            .skill-bx .right-bx{
+                width: 100%;
+                display: flex;
+                flex-direction: column
+            
+            }
+            
+            .skill-bx .bar{
+                width: 100%;
+                margin: 20px 0;
+            }
+            .skill-bx .bar:first-child{
+                margin-top: 0;
+            }
+            
+            .skill-bx .bar .info{
+                font-size: 16px;
+                font-weight: 500;
+            }
+            
+            .skill-bx .bar .info span{
+                font-size: 16px;
+                font-weight: 500;
+                opacity: 0;
+                animation: showText 0.5s 1s linear forwards;
+            }
+            
+            @keyframes showText {
+                100%{
+                opacity: 1;
+                }
+            }
+            .skill-bx .progress-line{
+                position: relative;
+                height: 10px;
+                width: 100%;
+                background: #808e9b;
+                border-radius: 10px;
+                transform: scaleX(0);
+                transform-origin: left;
+                animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+            }
+            
+            .skill-bx .progress-line span{
+                height: 100%;
+                background:#ff4757;
+                position: absolute;
+                border-radius: 10px;
+                transform: scaleX(0);
+                transform-origin: left;
+                animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+            }
+            
+            
+            
+            @keyframes animate {
+                100%{
+                transform: scaleX(1);
+                }
+            }
+            
+            .skill-bx .progress-line.html span{
+                width: 90%;
+            }
+            
+            .skill-bx .progress-line.css span{
+                width: 80%;
+            }
+            
+            .skill-bx .progress-line.javascript span{
+                width: 75%;
+            }
+            
+            .skill-bx .progress-line.php span{
+                width: 80%;
+            }
+            
+            .skill-bx .progress-line.cms span{
+                width: 90%;
+            }
+            
+            .skill-bx .progress-line.photoshop span{
+                width: 55%;
+            }
+            
+            .skill-bx .progress-line span::before{
+                content: '';
+                position: absolute;
+                right: 0;
+                top: -10px;
+                height: 0;
+                width: 0;
+                border: 7px solid transparent;
+                border-top-color: #000;
+                opacity: 0;
+                animation: showText2 0.5s 1.5s linear forwards;
+            }
+            
+            .skill-bx .progress-line span::after{
+                position: absolute;
+                right: -12px;
+                top: -28px;
+                background: #000;
+                color: #fff;
+                font-size: 12px;
+                padding: 1px 8px;
+                border-radius: 3px;
+                opacity: 0;
+                animation: showText2 0.5s 1.5s linear forwards;
+                
+            }
+            
+            @keyframes showText2 {
+                100%{
+                opacity: 1;
+                }
+            }
+            
+            .skill-bx .progress-line.html span::after{
+                content: '90%';
+            }
+            
+            .skill-bx .progress-line.css span::after{
+                content: '80%';
+            }
+            
+            .skill-bx .progress-line.javascript span::after{
+                content: '75%';
+            }
+            
+            .skill-bx .progress-line.php span::after{
+                content: '80%';
+            }
+            
+            .skill-bx .progress-line.cms span::after{
+                content: '90%';
+            }
+            
+            .skill-bx .progress-line.photoshop span::after{
+                content: '55%';
+            }
+
+            @media screen and (max-width: 768px) {
+                .skill-bx {
+                    grid-template-columns: 1fr;
+                    padding: 50px;
+                    gap: 20px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <section class="skill-section">
+            <div class="skill-bx">
+                <div class="left-bx">
+                    <div class="bar">
+                        <div class="info">
+                            <span>HTML</span>
+                        </div>
+                        <div class="progress-line html"><span></span></div>
+                    </div>
+    
+                    <div class="bar">
+                        <div class="info">
+                            <span>CSS</span>
+                        </div>
+                        <div class="progress-line css"><span></span></div>
+                    </div>
+    
+                    <div class="bar">
+                        <div class="info">
+                            <span>JAVASCRIPT</span>
+                        </div>
+                        <div class="progress-line javascript"><span></span></div>
+                    </div>
+    
                 </div>
-                <button onclick="location.href='link-to-another-page'">Button</button>
+    
+                <div class="right-bx">
+    
+                    <div class="bar">
+                        <div class="info">
+                            <span>PHP</span>
+                        </div>
+                        <div class="progress-line php"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>WordPress/CMS</span>
+                        </div>
+                        <div class="progress-line cms"><span></span></div>
+                    </div>
+                    <div class="bar">
+                        <div class="info">
+                            <span>Photoshop</span>
+                        </div>
+                        <div class="progress-line photoshop"><span></span></div>
+                    </div>
+                </div>
+    
             </div>
-            <div class="introImage-section">
-                <img src="images/ProfilePicture.jpeg" alt="About Me">
-            </div>
-        </div>
-    </section>
-</body>
+        </section>
+    </body>
 </html>
