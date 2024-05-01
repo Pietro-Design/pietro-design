@@ -148,4 +148,33 @@ function nextLegsRight(){
     document.getElementById('legsRight').src = randomLegsRight[currentLegsRight];
 }
 
-/*Skills --------------------------------------------------------------------------------------*/
+/*Projects --------------------------------------------------------------------------------------*/
+document.addEventListener('DOMContentLoaded', (event) => {
+    const slider = document.querySelector('.carouselSlider');
+        const prevButton = document.querySelector('.carouselButton--prev');
+        const nextButton = document.querySelector('.carouselButton--next');
+
+        //better buttons for desktop
+        prevButton.addEventListener('click', () => {
+            slider.scrollBy({ left: -slider.offsetWidth, behavior: 'smooth' });
+        });
+
+        nextButton.addEventListener('click', () => {
+            slider.scrollBy({ left: slider.offsetWidth, behavior: 'smooth' });
+        });
+
+        //auto scroll
+        const images = Array.from(slider.children);
+        let currentIndex = 0;
+        function goToSlide(index) {
+            slider.scroll({
+                left: images[index].offsetLeft,
+                behavior: 'smooth'
+            });
+        }
+        function goToNextSlide() {
+            currentIndex = (currentIndex + 1) % images.length;
+            goToSlide(currentIndex);
+        }
+        setInterval(goToNextSlide, 6000);
+});
