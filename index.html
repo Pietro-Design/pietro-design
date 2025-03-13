@@ -29,7 +29,6 @@
             <ul>
                 <li class="hideOnMobile"><a href=""><customSelected><strong>HOME</strong></customSelected></a></li>
                 <li class="hideOnMobile"><a href="about.html">ABOUT</a></li>
-                <li class="hideOnMobile"><a href="#skillsArea">SKILLS</a></li>
                 <li class="hideOnMobile"><a href="projects.html">PROJECTS</a></li>
 
                 <li onclick=showSidebar() class="menuButton"><a href="javascript:void(0);"><img src="images/Reactions_disappointed.png"></a></li>
@@ -40,10 +39,13 @@
 
                 <li><a href=""><customSelected><strong>HOME</strong></customSelected></a></li>
                 <li><a href="about.html">ABOUT</a></li>
-                <li><a href="#skillsArea">SKILLS</a></li>
                 <li><a href="projects.html">PROJECTS</a></li>
             </ul>
         </nav>
+    </section>
+
+    <section>
+       
     </section>
 
     <!-- landing area -->
@@ -59,9 +61,6 @@
         <img src="images/Legs_1_resize.png" alt="" id="legsRight" class="CharactersRight">
         <img src="images/Body_1_resize.png" alt="" id="bodyRight" class="CharactersRight">
         <img src="images/Head_1_resize.png" alt="" id="headRight" class="CharactersRight" onclick="nextsHeadRight(); nextsBodyRight(); nextLegsRight()">
-
-        <!-- <a href="" class="hero-btn">About me</a> -->
-        <a href="about.html" class="hero-btn_2"><span>About me</span></a>
     </section>
 
     <!-- section separator -->
@@ -114,7 +113,7 @@
     <!-- section separator -->
     <div class="scrollContainer">
         <div class="scroll">
-            <div class="rightScroll">
+            <div class="leftScroll">
                 <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
                 <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
             </div>
@@ -122,66 +121,76 @@
     </div>
 
     <!-- skills -->
-    <section style="background-color: #ede8e4;" id="skillsArea">
-        <div class="skillTitle">
-            <h1 style="color: #d44449;">Skills</h1>
-        </div>
-        <div class="skill-section">
-            <div class="skill-bx">
-                <div class="left-bx">
+    
+    <section class="skillsMain">
+        <div class="scrollingCardsWrapper">
+            <div class="cardsContainer">
+                <div class="skillCard"><img src="images/SkillsIcons/Arduino.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/blender-software.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/figma.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/unity-3d.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/unreal-engine.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/godot-engine.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/html-5-logo.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/alternate-css3-logo.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/javascript-js-square.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/p5js.svg" alt="" style="opacity: 95%;"></div>
+                <div class="skillCard"><img src="images/SkillsIcons/Csharp.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/vscode.svg" alt=""></div>
 
-                    <div class="bar">
-                        <div class="info">
-                            <span>Unity</span>
-                        </div>
-                        <div class="progress-line advanced"><span></span></div>
-                    </div>
-    
-                    <div class="bar">
-                        <div class="info">
-                            <span>C#</span>
-                        </div>
-                        <div class="progress-line good"><span></span></div>
-                    </div>
-    
-                    <div class="bar">
-                        <div class="info">
-                            <span>Figma</span>
-                        </div>
-                        <div class="progress-line basic"><span></span></div>
-                    </div>
-    
-                </div>
-    
-                <div class="right-bx">
-    
-                    <div class="bar">
-                        <div class="info">
-                            <span>HTML CSS</span>
-                        </div>
-                        <div class="progress-line basic"><span></span></div>
-                    </div>
-                    <div class="bar">
-                        <div class="info">
-                            <span>Unreal</span>
-                        </div>
-                        <div class="progress-line basic"><span></span></div>
-                    </div>
-                    <div class="bar">
-                        <div class="info">
-                            <span>Blender</span>
-                        </div>
-                        <div class="progress-line good"><span></span></div>
-                    </div>
-                </div>
-    
+                <!-- dup cards for infinite loop -->
+
+                <div class="skillCard"><img src="images/SkillsIcons/Arduino.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/blender-software.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/figma.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/unity-3d.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/unreal-engine.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/godot-engine.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/html-5-logo.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/alternate-css3-logo.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/javascript-js-square.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/p5js.svg" alt="" style="opacity: 95%;"></div>
+                <div class="skillCard"><img src="images/SkillsIcons/Csharp.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/vscode.svg" alt=""></div>
+            </div>
+        </div>
+        <div class="secondaryScrollingCardsWrapper">
+            <div class="cardsContainer" style="animation: secondaryScrollCards 30s linear infinite;">
+                <div class="skillCard"><img src="images/SkillsIcons/Arduino.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/blender-software.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/figma.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/unity-3d.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/unreal-engine.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/godot-engine.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/html-5-logo.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/alternate-css3-logo.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/javascript-js-square.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/p5js.svg" alt="" style="opacity: 95%;"></div>
+                <div class="skillCard"><img src="images/SkillsIcons/Csharp.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/vscode.svg" alt=""></div>
+
+                <!-- dup cards for infinite loop -->
+
+                <div class="skillCard"><img src="images/SkillsIcons/Arduino.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/blender-software.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/figma.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/unity-3d.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/unreal-engine.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/godot-engine.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/html-5-logo.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/alternate-css3-logo.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/javascript-js-square.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/p5js.svg" alt="" style="opacity: 95%;"></div>
+                <div class="skillCard"><img src="images/SkillsIcons/Csharp.svg" alt=""></div>
+                <div class="skillCard"><img src="images/SkillsIcons/vscode.svg" alt=""></div>
             </div>
         </div>
     </section>
+
     <!-- section separator -->
     <div class="scrollContainer">
         <div class="scroll">
-            <div class="rightScroll">
+            <div class="leftScroll">
                 <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
                 <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
             </div>
@@ -189,23 +198,8 @@
     </div>
 
     <!-- projects ‹ › -->
-    <section class="carouselContainer">
-        <div class="carouselSliderWrapper">
-            <button class="carouselButton carouselButton--prev">‹</button>
-            <button class="carouselButton carouselButton--next">›</button>
+    
 
-            <div class="carouselSlider">
-                <a href="projects.html"><img id="slided-1" src="images/Leonardo_Diffusion_abstract_render_ultra_realistic_high_defini_0 (2).jpg" alt=""></a>
-                <a href="projects.html"><img id="slided-2" src="images/Leonardo_Diffusion_abstract_render_ultra_realistic_high_defini_0.jpg" alt=""></a>
-                <a href="projects.html"><img id="slided-3" src="images/Leonardo_Diffusion_abstract_render_ultra_realistic_high_defini_1.jpg" alt=""></a>
-            </div>
-            <div class="carouselSliderNav">
-                <a href="#slide-1"></a>
-                <a href="#slide-2"></a>
-                <a href="#slide-3"></a>
-            </div>
-        </div>
-    </section>
 
     <!-- section separator -->
     <div class="scrollContainer">

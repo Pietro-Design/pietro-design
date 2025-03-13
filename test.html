@@ -3,144 +3,160 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Test video</title>
 
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-        .carouselContainer{
-            padding: 1rem;
-        }
-        .carouselSliderWrapper{
-            position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .carouselSlider{
-            display: flex;
-            aspect-ratio: 16/9;
-            overflow-x: auto;
-            scroll-snap-type: x mandatory;
-            scroll-behavior: smooth;
-            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-            border-radius: 15px;
-
-            -ms-overflow-style: none;
-            scrollbar-width: none;
-        }
-        .carouselSlider::-webkit-scrollbar{
-            display: none;
-        }
-        .carouselSlider a{
+        html,body
+        {
             width: 100%;
-            display: flex;
-            aspect-ratio: 16/9;
-        }
-        .carouselSlider img{
-            flex: 1 0 100%;
-            scroll-snap-align: start;
-            object-fit: cover;
-        }
-        .carouselSliderNav{
-            display: flex;
-            column-gap: 1rem;
-            position: absolute;
-            bottom: 1.25rem;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 1;
-        }
-        .carouselSliderNav a{
-            width: 0.5rem;
-            height: 0.5rem;
-            border-radius: 50%;
-            background-color: #dad6d2;
-            opacity: 75%;
-            transition: opacity ease 250ms;
-        }
-        .carouselSliderNav a:hover{
-            opacity: 1;
-        }
-        .carouselButton {
-            display: none;
-            position: absolute;
-            max-height: 40px;
-            background: #dad6d2;
-            border: none;
-            font-size: 2rem;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 75%;
-            cursor: pointer;
-            border-radius: 14px;
-        }
-        .carouselButton:hover {
-            opacity: 1;
-        }
-        .carouselButton--prev {
-            left: 1rem;
-        }
-        .carouselButton--next {
-            right: 1rem;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            overflow-x: hidden;
+            background: rgb(55,52,53);
+            background: radial-gradient(circle, rgba(55,52,53,1) 0%, rgba(0,0,0,1) 100%);
         }
 
-        @media (min-width: 800px){
-            .carouselButton{
-                display: block;
-            }
+        .video-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        }
+
+        /* Create the 'hole' effect by using a wrapper */
+        .video-wrapper {
+            height: 100%;
+            max-height: 100vh ;
+            position: fixed;
+            top: 0px;
+        }
+
+        /* Style the video */
+        video {
+            display: block;
+            width: 100%; /* Makes the video responsive */
+            max-height: 100%;
+            background-color: black;
+        }
+
+
+        .fade {
+            height: 100vh;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: rgb(189, 187, 187);
+        }
+
+        .zoom {
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            place-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+
+        .afterzoom {
+            position:absolute;
+            height: 100vh ;
+            width: 100%;
+            background: red;
+            overflow-x: auto;
         }
     </style>
 </head>
 <body>
-    <section class="carouselContainer">
-        <div class="carouselSliderWrapper">
-            <button class="carouselButton carouselButton--prev">‹</button>
-            <button class="carouselButton carouselButton--next">›</button>
-            <div class="carouselSlider">
-                <a href="projects.html"><img id="slided-1" src="images/Leonardo_Diffusion_abstract_render_ultra_realistic_high_defini_0 (2).jpg" alt=""></a>
-                <a href="projects.html"><img id="slided-2" src="images/Leonardo_Diffusion_abstract_render_ultra_realistic_high_defini_0.jpg" alt=""></a>
-                <a href="projects.html"><img id="slided-3" src="images/Leonardo_Diffusion_abstract_render_ultra_realistic_high_defini_1.jpg" alt=""></a>
-            </div>
-            <div class="carouselSliderNav">
-                <a href="#slide-1"></a>
-                <a href="#slide-2"></a>
-                <a href="#slide-3"></a>
+    <div class="fade">
+        <div class="zoom">
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <video autoplay muted loop>
+                        <source src="images/Looping_white_4k.mp4">
+                    </video>
+                </div>
             </div>
         </div>
-    </section>
+    </div>
+    
+    
+    <div class="afterzoom">
+        <p>This should appear after the above element is fully zoomed.</p>
+    </div>
 
-    <script>
-        const slider = document.querySelector('.carouselSlider');
-        const prevButton = document.querySelector('.carouselButton--prev');
-        const nextButton = document.querySelector('.carouselButton--next');
-
-        //better buttons for desktop
-        prevButton.addEventListener('click', () => {
-            slider.scrollBy({ left: -slider.offsetWidth, behavior: 'smooth' });
-        });
-
-        nextButton.addEventListener('click', () => {
-            slider.scrollBy({ left: slider.offsetWidth, behavior: 'smooth' });
-        });
-
-        //auto scroll
-        const images = Array.from(slider.children);
-        let currentIndex = 0;
-        function goToSlide(index) {
-            slider.scroll({
-                left: images[index].offsetLeft,
-                behavior: 'smooth'
-            });
-        }
-        function goToNextSlide() {
-            currentIndex = (currentIndex + 1) % images.length;
-            goToSlide(currentIndex);
-        }
-        setInterval(goToNextSlide, 6000);
-    </script>
 </body>
+
+
+<script>
+    const zoomElement = document.querySelector('.zoom')
+    const fadeElement = document.querySelector('.fade')
+    const afterZoomElement = document.querySelector('.afterzoom')
+    const imgElement = document.querySelector('video')
+    const WIDTH = document.body.clientWidth
+    const HEIGHT = zoomElement.clientHeight
+    const IMAGE_WIDTH = imgElement.clientWidth
+    const IMAGE_HEIGHT = imgElement.clientHeight
+    const ZOOM_SPEED = 100 // Lower is faster
+    const ZOOM_BREAKPOINT = WIDTH / IMAGE_WIDTH // When it should stop zooming in
+    const IMAGE_HEIGHT_MAX = IMAGE_HEIGHT * ZOOM_BREAKPOINT
+    const ABSOLUTE = ZOOM_BREAKPOINT * ZOOM_SPEED // Absolute position, when the Element reached maximum size
+
+    // Fade --------------------------------------------------------------------------------------
+    const FADE_SPEED = 200 // Lower is faster
+    let fade = 1
+    let prev = 0
+    // -------------------------------------------------------------------------------------- Fade
+
+    function anim() {
+        let scroll = window.scrollY
+        let temp = scroll / ZOOM_SPEED
+        let zoom = temp > 1 ? temp : 1
+
+        // Only update the Elements scale, when we are below the breakpoint
+        if (zoom < ZOOM_BREAKPOINT) {
+            // Only scale the Image, so the Zoom element does not mess with the document width
+            imgElement.style.transform = `scale(${zoom})`
+            // Sets the Elements position to fixed, so it can resize without scrolling away
+            zoomElement.style.top = '0px'
+            zoomElement.style.position = 'fixed'
+        } else {
+            // Makes sure the Element always reaches Max Size
+            imgElement.style.transform = `scale(${ZOOM_BREAKPOINT})`
+            // Sets the elements position to absolute, so it will scroll with the rest of the document
+            zoomElement.style.position = 'absolute'
+            zoomElement.style.top = ABSOLUTE + 'px'
+        }
+
+        // Fade --------------------------------------------------------------------------------------
+        let dif = prev - scroll
+
+        if (zoom < ZOOM_BREAKPOINT - FADE_SPEED / ZOOM_SPEED) {
+            fade = 1
+        } else if (zoom > ZOOM_BREAKPOINT) {
+            fade = 0
+        } else {
+            fade += dif / FADE_SPEED
+        }
+
+        fadeElement.style.opacity = fade
+        prev = scroll
+        // -------------------------------------------------------------------------------------- Fade
+    }
+
+    // Resets scroll position on every reload
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual'
+    }
+
+    document.addEventListener('scroll', () => window.requestAnimationFrame(anim))
+
+    // Fade --------------------------------------------------------------------------------------
+    zoomElement.style.opacity = 1
+    // -------------------------------------------------------------------------------------- Fade
+
+    // Positions the afterZoom element right below the zoomed image
+    afterZoomElement.style.top = ABSOLUTE + IMAGE_HEIGHT_MAX /2 + HEIGHT/2  + 'px'
+</script>
 </html>
