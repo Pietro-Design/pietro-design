@@ -190,10 +190,10 @@ nav li customSelected:after{
         position: absolute;
         transform: translate(0, 0) scaleX(-1);
         width: 100vw;
+        
     }
-    .CharactersRight{display: none;}
-    .hero-btn{
-    transform: translate(0, 20vh);
+    .CharactersRight{
+        display: none;
     }
 }
 
