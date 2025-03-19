@@ -91,6 +91,47 @@ function updateCharacter() {
 }
 
 updateCharacter();
+/*character reactions --------------------------------------------------------------------------------------------------*/
+const imageList = [ // List of image URLs
+    "images/Reactions_love.png",
+    "images/Reactions_happy.png",
+    "images/Reactions_tired.png",
+    "images/Reactions_disappointed.png",
+    "images/Reactions_sad.png",
+    "images/Reactions_worried.png",
+    "images/Reactions_love.png"
+];
+
+// Create a container for the random image
+const reactImage = document.getElementById("reactImage");
+
+function showRandomImage() {
+    // Pick a random image from the list
+    const imagePath = imageList[Math.floor(Math.random() * imageList.length)];
+    reactImage.src = imagePath;
+
+    reactImage.style.display = "block";
+    reactImage.style.opacity = "1";
+
+
+    // Hide the image after 2 seconds
+    setTimeout(() => {
+        reactImage.style.opacity = "0"; // Fade out
+        setTimeout(() => {
+            reactImage.style.display = "none"; // Completely hide
+        }, 500);
+    }, 2000);
+
+
+    scheduleNextImage();
+}
+
+function scheduleNextImage() {
+    const interval = Math.random() * (25000 - 15000) + 15000; // Random time between 15-20 seconds
+    setTimeout(showRandomImage, interval);
+}
+
+scheduleNextImage();
 
 
 /*logo randomly changing on click --------------------------------------------------------------------------------------*/

@@ -10,6 +10,7 @@
     --baseColor_dark: #dad6d2e7;
     --baseColor_dark_transparent: #dad6d24b;
     --red_interactibles: #d44449;
+    --green_text: #3a4b44;
 }
 
 body{
@@ -412,7 +413,7 @@ nav li customSelected:after{
     display: block;
     padding: 10px 20px;
     color: var(--baseColor_clear);
-    background-color: #3a4b44;
+    background-color: var(--green_text);
     overflow: hidden;
     box-shadow: inset 0px 0px 0px 1px transparent;
   }
@@ -425,7 +426,7 @@ nav li customSelected:after{
     left: 0;
     width: 2px;
     height: 2px;
-    background-color: #3a4b44;
+    background-color: var(--green_text);
   }
   
   .introButton_lg::after {
@@ -436,7 +437,7 @@ nav li customSelected:after{
     bottom: 0;
     width: 4px;
     height: 4px;
-    background-color: #3a4b44;
+    background-color: var(--green_text);
     transition: all .2s ease;
   }
   
@@ -457,7 +458,7 @@ nav li customSelected:after{
   }
   
   .introButton:hover {
-    color: #3a4b44;
+    color: var(--green_text);
   }
   
   .introButton:hover .introButton_sl {
@@ -623,3 +624,60 @@ nav li customSelected:after{
     .project:hover .project-title {
         opacity: 1;
     }
+
+    /* Footer ----------------------------------------------------------------------------------------*/
+    .footer {
+        background-color: var(--baseColor_dark);
+        padding: 5px;
+        text-align: center;
+        position: relative;
+    }
+    
+    .footer-center {
+        margin-bottom: 10px;
+    }
+    
+    .footer-image {
+        width: 80%;
+        max-width: 200px;
+        image-rendering: pixelated;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+    }
+    
+    .footer-links {
+        margin-top: 5px;
+    }
+    
+    .footer-links a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: var(--green_text);
+        font-weight: bold;
+    }
+    
+    .footer-links a:hover {
+        text-decoration: underline;
+    }
+    
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 0;
+    }
+    
+    .footer-left, .footer-right {
+        text-align: left;
+    }
+    
+    .footer-right {
+        text-align: right;
+    }
+    
+    .footer p {
+        margin: 5px 0;
+        color: var(--red_interactibles);
+    }
+    
