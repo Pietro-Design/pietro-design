@@ -37,82 +37,61 @@ window.addEventListener('DOMContentLoaded', ()=>{
 /*cursor character animation --------------------------------------------------------------------------------------*/
 const character = document.getElementById("character");
 
-let mouseX = window.innerWidth / 2, mouseY = window.innerHeight / 2; // Initial mouse position
-let charX = mouseX, charY = mouseY; // Character's current position
-let isMoving = false;
-let scrollY = 0; // Tracks the scroll offset
-const speed = 1; // Movement speed
-const stopRadius = 40; // Radius at which the character stops moving
+let mouseX = 0, mouseY = 0; // Start in center
+let charX = mouseX, charY = mouseY; // Character's actual position
+let isMoving = true;
+const speed = 1.5; // Adjust speed
+const stopRadius = 40; // Distance at which the character stops moving
 
-// Update character position on mouse movement
 document.addEventListener("mousemove", (event) => {
     mouseX = event.clientX;
     mouseY = event.clientY;
-
-    if (!isMoving) {
-        isMoving = true;
-        setRunningAnimation();
-    }
 });
 
-// Track scroll position
-document.addEventListener(
-    "scroll",
-    () => {
-        scrollY = window.scrollY;
-        updateCharacterScroll(); // React immediately to scroll
-    },
-    { passive: true } // Passive listener for better performance
-);
+// Function to force animation refresh
+function setRunningAnimation() {
+    character.style.animation = "none"; // Reset animation
+    void character.offsetWidth;
+    character.style.animation = "run-animation 0.5s steps(8) infinite";
+    character.style.backgroundImage = "url('images/CursorCharacter/Ch_Run_SH.png')";
+}
 
-// Smoothly move the character with requestAnimationFrame
+// Function to force idle animation
+function setIdleAnimation() {
+    character.style.animation = "none"; // Reset animation
+    void character.offsetWidth;
+    character.style.animation = "idle-animation 2s steps(8) infinite";
+    character.style.backgroundImage = "url('images/CursorCharacter/Ch_idle_SH.png')";
+}
+
+// Smooth movement using requestAnimationFrame
 function updateCharacter() {
     const dx = mouseX - charX;
-    const dy = mouseY - (charY - scrollY); // Adjust Y position with scroll
+    const dy = mouseY - charY;
     const distance = Math.sqrt(dx * dx + dy * dy);
 
     if (distance > stopRadius) {
         charX += (dx / distance) * speed;
         charY += (dy / distance) * speed;
-        character.style.transform = `translate(${charX}px, ${charY - scrollY}px) scaleX(${dx > 0 ? 1 : -1})`;
+        character.style.transform = `translate(${charX}px, ${charY}px) scaleX(${dx > 0 ? 1 : -1})`;
 
-        if (!isMoving) {
+        if(!isMoving){
             isMoving = true;
             setRunningAnimation();
         }
-    } else {
+    }
+    else{
         if (isMoving) {
             isMoving = false;
             setIdleAnimation();
         }
     }
-
+    
     requestAnimationFrame(updateCharacter);
 }
 
-// Update the character's position immediately on scroll
-function updateCharacterScroll() {
-    character.style.transform = `translate(${charX}px, ${charY - scrollY}px)`; // Adjust for scroll offset
-}
-
-// Set running animation
-function setRunningAnimation() {
-    character.style.animation = "none";
-    void character.offsetWidth; // Force reflow
-    character.style.animation = "run-animation 1s steps(8) infinite";
-    character.style.backgroundImage = "url('images/CursorCharacter/Ch_Run_SH.png')";
-}
-
-// Set idle animation
-function setIdleAnimation() {
-    character.style.animation = "none";
-    void character.offsetWidth; // Force reflow
-    character.style.animation = "idle-animation 2s steps(8) infinite";
-    character.style.backgroundImage = "url('images/CursorCharacter/Ch_idle_SH.png')";
-}
-
-// Kickstart the animation loop
 updateCharacter();
+
 
 /*logo randomly changing on click --------------------------------------------------------------------------------------*/
 let images = new Array();
