@@ -493,6 +493,7 @@ nav li customSelected:after{
         background-size: 100px 150px;
 
         transform: rotate(-5deg);
+        z-index: -1;
     }
 
     .scrollingCardsWrapper{
@@ -624,6 +625,60 @@ nav li customSelected:after{
     .project:hover .project-title {
         opacity: 1;
     }
+    /* Contact section ----------------------------------------------------------------------------------------*/
+    /* OLD
+    .contactWrapper{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .contactWrapper h1{
+        color: var(--baseColor_clear);
+        padding-top: 30px;
+        text-align: center;
+    }
+    input{
+        background-color: var(--baseColor_dark);
+        width: 100%;
+        max-width: 500px;
+        font-size: 14px;
+        padding: 16px 16px;
+        border-radius: 10px;
+        border-color: var(--green_text);
+        margin-bottom: 20px;
+    }
+    textarea{
+        background-color: var(--baseColor_dark);
+        width: 100%;
+        max-width: 500px;
+        font-size: 14px;
+        padding: 16px 16px;
+        border-radius: 10px;
+        border-color: var(--green_text);
+        margin-bottom: 25px;
+    }
+    input:focus-within{
+        outline: none;
+        border-color: var(--red_interactibles);
+        border-width: 3px;
+    }
+    textarea:focus-within{
+        outline: none;
+        border-color: var(--red_interactibles);
+        border-width: 3px;
+    }
+
+    @media (max-width: 600px){
+        input{
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+        textarea{
+            font-size: 12px;
+        }
+    } */
 
     /* Footer ----------------------------------------------------------------------------------------*/
     .footer {
@@ -645,7 +700,10 @@ nav li customSelected:after{
         display: block;
         margin: 0 auto;
     }
-    
+    .mobileFooterImg{
+        display: none;
+    }
+
     .footer-links {
         margin-top: 5px;
     }
@@ -680,4 +738,20 @@ nav li customSelected:after{
         margin: 5px 0;
         color: var(--red_interactibles);
     }
-    
+    @media (max-width: 600px){
+        .footer p{
+            font-size: 12px;
+        }
+        .footer-links{
+            display: none;
+        }
+        .footer-image{
+            display: none;
+        }
+        .mobileFooterImg{
+            display: inline;
+            image-rendering: pixelated;
+            height: 30px;
+            width: auto;
+        }
+    }
