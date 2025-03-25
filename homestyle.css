@@ -686,6 +686,7 @@ nav li customSelected:after{
         padding: 5px;
         text-align: center;
         position: relative;
+        height: 120px;
     }
     
     .footer-center {
