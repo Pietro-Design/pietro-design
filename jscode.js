@@ -249,3 +249,37 @@ function nextLegsRight(){
 }
 
 /*Projects --------------------------------------------------------------------------------------*/
+document.addEventListener("DOMContentLoaded", function () {
+    const sliders = document.querySelectorAll(".image-slider");
+
+    sliders.forEach(slider => {
+        let images = slider.querySelectorAll("img");
+        let prevButton = slider.querySelector(".prev");
+        let nextButton = slider.querySelector(".next");
+        let currentIndex = 0;
+
+        if (images.length > 0) {
+            images[currentIndex].classList.add("active");
+        }
+
+        function showSlide(index) {
+            images.forEach(img => img.classList.remove("active"));
+            images[index].classList.add("active");
+        }
+
+        function prevSlide() {
+            currentIndex = (currentIndex > 0) ? currentIndex - 1 : images.length - 1;
+            showSlide(currentIndex);
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex < images.length - 1) ? currentIndex + 1 : 0;
+            showSlide(currentIndex);
+        }
+
+        if (prevButton && nextButton) {
+            prevButton.addEventListener("click", prevSlide);
+            nextButton.addEventListener("click", nextSlide);
+        }
+    });
+});

@@ -6,8 +6,9 @@
     <!-- Setup references -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bad Hat | About</title>
+    <title>Bad Hat | Projects</title>
     <link rel="stylesheet" href="homestyle.css">
+    <link rel="stylesheet" href="projectsstyle.css">
 
     <!-- Importing font here -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,7 +17,17 @@
 </head>
 <body>
     <!-- intro animation -->
-    <div class="intro"></div>
+    <div class="intro">
+        <h1 class="logo-header">
+            <span class="logo">Bad.</span><span class="logo">Hat</span>
+        </h1>
+    </div>
+
+    <!-- cursor character -->
+    <div class="character" id="character">
+        <img src="images/Reactions_love.png" style="position: fixed; width: 30px; transform: translate(10px,-40px); display: none; image-rendering: pixelated; transition: opacity 0.5s ease-in-out;" id="reactImage">
+        <img src="images/CursorCharacter/Shadow.png" style="position: fixed;">
+    </div>
 
     <!-- header -->
     <section class="header">
@@ -39,8 +50,258 @@
             </ul>
         </nav>
     </section>
+    <div style="height: 80px;"></div>
+
+    <!-- section separator -->
+    <div class="scrollContainer">
+        <div class="scroll">
+            <div class="leftScroll"  id="project_1">
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- section separator -->
+    <div class="scrollContainer">
+        <div class="scroll">
+            <div class="rightScroll">
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+            </div>
+        </div>
+    </div>
 
     
+    <!-- Project 1 -->
+    <section class="projects">
+        <div class="project-container">
+            <h2>Air-Tight</h2>
+            <h3>Status - complete</h3>
+            <p class="project-description">Air-Tight is a survival game based on continuous movement. 
+                You will see yourselves in the act of trying to cross a deserted wasteland in the lack of oxygen. 
+                Your only companion: a giant animal that will transport all your belongings and oxygen stocks. 
+                Finding resources and upgrading the mount will give you more chances of survival.</p>
+            
+            <div class="image-slider">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <img src="images/Projects/AirTightCover.png" class="active" alt="">
+                <img src="images/Projects/PeduzziPietro_AirTight_Screenshot_1.png" alt="">
+                <img src="images/Projects/PeduzziPietro_AirTight_Screenshot_2.png" alt="">
+                <img src="images/Projects/PeduzziPietro_AirTight_Screenshot_3.png" alt="">
+                <img src="images/Projects/PeduzziPietro_AirTight_Screenshot_5.png" alt="">
+                <img src="images/Projects/PeduzziPietro_AirTight_Screenshot_6.png" alt="">
+                <img src="images/Projects/PeduzziPietro_AirTight_Screenshot_7.png" alt="">
+                <img src="images/Projects/PeduzziPietro_AirTight_Screenshot_08.png" alt="">
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/w0UYdTPesFU?si=KfqecGaWKHvYc50A" allowfullscreen></iframe>
+            </div>
+            <button class="introButton" onclick= "window.open('https://bad-hat.itch.io/air-tight', '_blank');">
+                <span class="introButton_lg">
+                    <span class="introButton_sl"></span>
+                    <span class="introButton_text">See game</span>
+                </span>
+            </button>
+        </div>
+    </section>
+
+    <!-- section separator -->
+    <div class="scrollContainer">
+        <div class="scroll">
+            <div class="leftScroll"  id="project_2">
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- section separator -->
+    <div class="scrollContainer">
+        <div class="scroll">
+            <div class="rightScroll">
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 2 -->
+    <section class="projects">
+        <div class="project-container">
+            <h2>Blockscraper</h2>
+            <h3>Status - complete</h3>
+            <p class="project-description">This project was a research on procedural generation, shaders and simple AI and pathfinding for NPCs. 
+                The project was done by myself completely end of 2022.</p>
+            
+            <div class="image-slider">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <img src="images/Projects/BlockscraperCover.png" class="active" alt="">
+                <img src="images/Projects/Cattura_3.png" alt="">
+                <img src="images/Projects/Cattura_4.png" alt="">
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </div>
+
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/BtiBkfZdvQ0?si=ubFKcVxVZXMrg1FN" allowfullscreen></iframe>
+            </div>
+            
+            <button class="introButton" onclick= "window.open('https://bad-hat.itch.io/blockscraper', '_blank');">
+                <span class="introButton_lg">
+                    <span class="introButton_sl"></span>
+                    <span class="introButton_text">See game</span>
+                </span>
+            </button>
+        </div>
+    </section>
+
+    <!-- section separator -->
+    <div class="scrollContainer">
+        <div class="scroll">
+            <div class="leftScroll"  id="project_3">
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- section separator -->
+    <div class="scrollContainer">
+        <div class="scroll">
+            <div class="rightScroll">
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project 3 -->
+    <section class="projects">
+        <div class="project-container">
+            <h2>GD Codex Algorithm</h2>
+            <h3>Status - ongoing</h3>
+            <p class="project-description">In video game development, it's getting tougher to find and research algorithms. 
+                The term "artificial intelligence" is overused and makes research of algorithms and automation techniques time-consuming. 
+                Often all due to the prevailing presence of machine learning algorithms. <br>
+                The idea is to create a digital library that gathers AI applications, systems, 
+                and tools used in the game development community. This would be a starting point for 
+                game developers to understand the complexities of AI systems and their potential use in games.<br>
+                Game designers and the game industry will gain from a structured database of information, 
+                documenting the pros and cons of systems and identifying areas that need more research. Codex Algorithm evolves with AI and its impact on game development. 
+                The virtual library builds a community and resource archive to track AI advancements and aid design decisions. 
+                Often, the best solution isn’t the most elaborate but the one that looks the smartest in the simplest way.<br>
+            </p>
+            
+            <div class="image-slider">
+                <img src="images/Projects/GDCodexAlgorithm_1.png" class="active" alt="">
+            </div>
+            
+            <button class="introButton" onclick= "window.open('https://bad-hat.itch.io/air-tight', '_blank');">
+                <span class="introButton_lg">
+                    <span class="introButton_sl"></span>
+                    <span class="introButton_text">See website</span>
+                </span>
+            </button>
+        </div>
+    </section>
+
+    <!-- section separator -->
+    <div class="scrollContainer">
+        <div class="scroll">
+            <div class="leftScroll"   id="project_4">
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- section separator -->
+    <div class="scrollContainer">
+        <div class="scroll">
+            <div class="rightScroll">
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+            </div>
+        </div>
+    </div>
+
+        <!-- Project 4 -->
+        <section class="projects">
+            <div class="project-container">
+                <h2>Pirate Pigeons</h2>
+                <h3>Status - ongoing</h3>
+                <p class="project-description">Pirate Pigeons - Drowning is an Option is a chaotic party game where it is all about working together. 
+                    Players step into the role of a flightless and silly pigeon and embark on the most epic journey of her life. 
+                    Only through solid teamwork the shabby raft will stick together and the crew is prepared to fight off all odds on their way into the big unknown</p>
+                
+                <div class="image-slider">
+                    <img src="images/Projects/PiratePigeonsCover.png" class="active" alt="">
+                </div>
+    
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/oWCAtd0UUcQ?si=xJrzzKBHUyYTSMaZ" allowfullscreen></iframe>
+                </div>
+                
+                <button class="introButton" onclick= "window.open('https://piratepigeons.com/', '_blank');">
+                    <span class="introButton_lg">
+                        <span class="introButton_sl"></span>
+                        <span class="introButton_text">See website</span>
+                    </span>
+                </button>
+            </div>
+        </section>
+
+    
+    <!-- section separator -->
+    <div class="scrollContainer">
+        <div class="scroll">
+            <div class="leftScroll">
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- section separator -->
+    <div class="scrollContainer">
+        <div class="scroll">
+            <div class="rightScroll">
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+                <p>▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Web design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█ Game design █║▌│║│║█║█║▌│█║▌│║│║█ ▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄ █║▌│║│║█║█║▌│█║▌│║│║█  Digital production █║▌│║│║█║█║▌│█║▌│║│║█</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <img class="mobileFooterImg" src="images/Reactions_all_original.png" alt="Footer Image" class="footer-image">
+        <div class="footer-content">
+            <!-- Left Text -->
+            <div class="footer-left">
+                <p><b>© 2024 Pietro Peduzzi</b></p>
+                <p>Made with HTML and love</p>
+            </div>
+    
+            <!-- Center Image and Links -->
+            <div class="footer-center">
+                <img src="images/Reactions_all_original.png" alt="Footer Image" class="footer-image">
+                <div class="footer-links">
+                    <a href="https://www.linkedin.com/in/pietro-peduzzi-bb103a23a/">LinkedIn ↗</a>
+                    <a href="https://www.instagram.com/bad_hat_/">Instagram ↗</a>
+                    <a href="https://github.com/Pietro-Design">GitHub ↗</a>
+                    <a href="https://bad-hat.itch.io/">Itch.io ↗</a>
+                </div>
+            </div>
+    
+            <!-- Right Text -->
+            <div class="footer-right">
+                <p><b>Last update</b></p>
+                <p>Pietro on March 2025</p>
+            </div>
+        </div>
+    </footer>
 
     <script src="jscode.js"></script>
 </html>

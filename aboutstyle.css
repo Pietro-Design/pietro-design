@@ -19,16 +19,14 @@
 .row {
     display: flex;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     border-radius: 10px;
-  }
-  .row p{
-    /*color:transparent; text-shadow: 0 0 0 rgb(0, 0, 0);*/
+    gap: 10px;
   }
 
   .side {
-    -ms-flex: 30%;
-    flex: 30%;
+    -ms-flex: 60%;
+    flex: 60%;
     background-color: var(--baseColor_dark);
     padding: 20px;
     border-radius: 10px;
